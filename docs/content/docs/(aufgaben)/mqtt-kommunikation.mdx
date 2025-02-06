@@ -1,0 +1,23 @@
+---
+title: Getting Started
+description: Hier steht eine kurze Beschreibung
+---
+`https://bbspaptw.moodle-nds.de/mod/page/view.php?id=19638`
+# Grundlegende MQTT-Kommunikation Aufgabe
+
+
+Test Message: ist ein `node injection`, und ist als string eingestellt
+Mit der Nachricht "Test Message".
+<img class="aspect-4/3 h-64 w-64" src="/string-test-message-aufgabe1.jpeg" />
+
+Send Test Message: ist ein node mqtt out, und ist als Server localhost:1883 gestellt, mit den Admin account.
+Da es schreib Berechtigung braucht.
+<img src="/mqtt-output-test-message-aufgabe1.jpeg" />
+
+Test Message und Send test Message haben wir verbunden.
+
+Listen to test-topic: ist ein node mqtt in, und ist als Server localhost:1883 gestellt, mit den Admin account.
+Damit wir ein input bekommen, also eine Nachricht zum Server.
+
+debug 1: ist ein debug node, der dazu dient um die Nachricht auszugeben.
+Funktioniert in dem falle wie ein print() oder echo.
