@@ -7,6 +7,8 @@ import {
 } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 import defaultMdxComponents from "fumadocs-ui/mdx";
+import { ImageZoom } from "fumadocs-ui/components/image-zoom";
+import { Callout } from "fumadocs-ui/components/callout";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -25,6 +27,8 @@ export default async function Page(props: {
         <MDX
           components={{
             ...defaultMdxComponents,
+            img: (props) => <ImageZoom {...(props as any)} />,
+            Callout,
           }}
         />
       </DocsBody>

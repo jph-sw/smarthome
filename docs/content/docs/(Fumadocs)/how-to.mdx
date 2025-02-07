@@ -11,6 +11,7 @@ Fumadocs findet man in der Repo [Smarthome](https://github.com/jph-sw/smarthome)
 
 Fumadocs benötigt Nodejs und npm oder Bun damit es man es Lokal testen kann.
 Um an der Doku zuarbeiten muss die repo mit auf den Lokalen rechner gecloned werden.
+
 ```
 git clone https://github.com/jph-sw/smarthome.git
 ```
@@ -23,6 +24,7 @@ Als Beispiel: (beispiel-ordner)
 Um eine Seite in dem ordner zuerstellen muss im Ordner eine file.mdx erstellt werden.
 
 Jede Seite muss mit folgendem beginnen.
+
 ```
 ---
 title:
@@ -30,11 +32,15 @@ description:
 ---
 ```
 
+<Callout title="Wichtig">
+  Wenn man einen neuen Ordner erstellt, **muss** in der übergeordneten
+  `meta.json` der Ordnername hinzugefügt werden.
+</Callout>
+
 Um den live zustand der Doku zusehen kann die Doku lokal gehostet werden unter [http://localhost:3000/](http://localhost:3000).
 Mit dem Befehl npm oder bun wird dann die Lokale Doku gestartet.
+
 ```
 npm run dev
 bun run dev
 ```
-
-
