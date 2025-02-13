@@ -18,18 +18,29 @@ git clone https://github.com/jph-sw/smarthome.git
 
 **Bei Änderungen**
 
-Erst
-```
-git pull
-```
 <Callout title="Wenn eigene Änderungen vorliegen erst">
     ```
     git stash
 ```
 </Callout>
 
-Dann einmal `npm install` oder `bun install` ausführen.
+<Callout title="Als zweites">
+```
+git pull
+```
+</Callout>
 
+<Callout title="Als drittes">
+```
+ git commit -m "edit: Der Pfad wo man dran arbeitet.mdx Und kurze Nachricht";
+ ```
+</Callout>
+
+<Callout title="Immer machen, nach einem Pull">
+```
+Dann einmal `npm install` oder `bun install` ausführen.
+```
+</Callout>
 
 ## Use
 
