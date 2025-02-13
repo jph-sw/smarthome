@@ -27,6 +27,7 @@ export default async function Page(props: {
         <MDX
           components={{
             ...defaultMdxComponents,
+            /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
             img: (props) => <ImageZoom {...(props as any)} />,
             Callout,
           }}
