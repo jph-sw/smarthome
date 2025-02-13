@@ -10,30 +10,50 @@ description: Hier steht eine kurze Beschreibung
 Test Message: ist ein `node injection`, und ist als string eingestellt
 Mit der Nachricht "Test Message".
 
-![MQTT Kommunikation](/string-test-message-aufgabe1.jpeg)
+![MQTT Kommunikation](/Aufgabe1//string-test-message.jpeg)
 
 Send Test Message: ist ein node mqtt out, und ist als Server localhost:1883 gestellt, mit den Admin account.
 Da es schreib Berechtigung braucht.
 
-![MQTT Kommunikation](/mqtt-output-test-message-aufgabe1.jpeg)
+![MQTT Kommunikation](/Aufgabe1//mqtt-output-test-message.jpeg)
 
 Dann muss man auf den Edit Button gehen, um in die Eigenschaften zu kommen.
 Danach befindet man sich bei den Verbindung, und kann den Server einstellen.
 Da haben wir wieder localhost und den Port angegeben.
 
-![MQTT Kommunikation](/bearbeitung-button-aufgabe1.jpeg)
+![MQTT Kommunikation](/Aufgabe1//bearbeitung-button.jpeg)
 
 Danach sind wir in Sicherheit reingegangen, da wir ein Benutzer einstellen müssen.
 Wir haben den admin genommen, da er auf alles zugriff hat, und im späteren keine Probleme sich ergeben.
 
-![MQTT Kommunikation](/sicherheit-rechte-admin-aufgabe1.jpeg)
+![MQTT Kommunikation](/Aufgabe1//sicherheit-rechte-admin.jpeg)
 
 Test Message und Send test Message haben wir verbunden.
 
-![MQTT Kommunikation](/verbindung-der-test-message-aufgabe1.jpeg)
+![MQTT Kommunikation](/Aufgabe1/verbindung-der-test-message.jpeg)
 
 Listen to test-topic: ist ein node mqtt in, und ist als Server localhost:1883 gestellt, mit den Admin account.
 Damit wir ein input bekommen, also eine Nachricht zum Server.
+Das ganze ist genauso eingestellt wie der Output, nur das es ein Input ist.
+
+![MQTT Kommunikation](/Aufgabe1/mqtt-input.jpeg)
 
 debug 1: ist ein debug node, der dazu dient um die Nachricht auszugeben.
 Funktioniert in dem falle wie ein print() oder echo.
+Und da ist ein Button, also man kan den debug aktivieren oder deaktivieren.
+
+![MQTT Kommunikation](/Aufgabe1/debug-button.jpeg)
+
+
+
+
+
+Was da jetzt genau passiert ist, das man bei Test Message einen Button hat, wenn man den drückt.
+Sendet er an den locahost eine Nachricht, die wir konfiguriert haben. Im unseren falle ist es einfach eine Test Message.
+
+![MQTT Kommunikation](/Aufgabe1/function.jpeg)
+
+![MQTT Kommunikation](/Aufgabe1/mqtt-input-and-debug.jpeg)
+
+Listen to test-topic: ist ein node mqtt in, und ist als Server localhost:1883 gestellt, mit den Admin account.
+Damit wir ein input bekommen, also eine Nachricht zum Server.
