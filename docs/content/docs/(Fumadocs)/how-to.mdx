@@ -16,6 +16,21 @@ Um an der Doku zuarbeiten muss die repo mit auf den Lokalen rechner gecloned wer
 git clone https://github.com/jph-sw/smarthome.git
 ```
 
+**Bei Änderungen**
+
+Erst
+```
+git pull
+```
+<Callout title="Wenn eigene Änderungen vorliegen erst">
+    ```
+    git stash
+```
+</Callout>
+
+Dann einmal `npm install` oder `bun install` ausführen.
+
+
 ## Use
 
 Um in Fumadocs neue Ordner zu erstellen muss unter content/docs einen ordners erstellen.
