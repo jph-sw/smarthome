@@ -5,84 +5,84 @@ description: Einrichten und Bearbeitung von Fumadocs
 
 ## Install
 
-Fumadocs benötigt Nodejs und npm oder Bun damit es man es Lokal testen kann.
-Um an der Doku zuarbeiten muss die repo mit auf den Lokalen rechner gecloned werden.
+Fumadocs benötigt **Node.js** und **npm** oder **Bun**, damit es lokal getestet werden kann.
+Um an der Dokumentation zu arbeiten, muss das Repository auf den lokalen Rechner geklont werden:
 
-```
+```sh
 git clone https://github.com/jph-sw/smarthome.git
 ```
 
-**Bei Änderungen**
+## Änderungen einpflegen
 
+Falls bereits eigene Änderungen vorliegen, sollten diese zunächst zwischengespeichert werden:
 
-<Callout title="Wenn eigene Änderungen vorliegen erst">
-    ```
-    git stash
-    ```
-</Callout>
-
-<Callout title="Als zweites">
-    ```
-    git pull
-    ```
-</Callout>
-
-<Callout title="Als drittes">
-    ```
-    git stash pop
-    ```
-</Callout>
-
-<Callout title="Als viertes">
-    ```
-    git add .
-    ```
-</Callout>
-
-<Callout title="Als fünftes">
-    ```
-    git commit -m "edit: Der Pfad wo man dran arbeitet.mdx Und kurze Nachricht";
-    ```
-</Callout>
-
-<Callout title="Als sechstes">
-    ```
-    git push
-    ```
-</Callout>
-
-<Callout title="Immer machen, nach einem Pull">
-    ```
-    Dann einmal `npm install` oder `bun install` ausführen.
-    ```
-</Callout>
-
-
-## Use
-
-Um in Fumadocs neue Ordner zu erstellen muss unter content/docs einen ordners erstellen.
-Als Beispiel: (beispiel-ordner)
-
-Um eine Seite in dem ordner zuerstellen muss im Ordner eine file.mdx erstellt werden.
-
-Jede Seite muss mit folgendem beginnen.
-
+```sh
+git stash
 ```
+
+Anschließend das neueste Update vom Repository holen:
+
+```sh
+git pull
+```
+
+Gespeicherte Änderungen wiederherstellen:
+
+```sh
+git stash pop
+```
+
+Danach die Änderungen zum Commit vorbereiten:
+
+```sh
+git add .
+```
+
+Commit mit einer aussagekräftigen Nachricht erstellen:
+
+```sh
+git commit -m "edit: Der Pfad wo man dran arbeitet.mdx Und kurze Nachricht"
+```
+
+Die Änderungen ins entfernte Repository hochladen:
+
+```sh
+git push
+```
+
+### Nach jedem `git pull`
+
+Nach dem Aktualisieren des Repositories sollte sichergestellt werden, dass alle Abhängigkeiten installiert sind:
+
+```sh
+npm install  # oder bun install
+```
+
+## Nutzung
+
+Um in Fumadocs neue Ordner zu erstellen, muss unter `content/docs` ein neuer Ordner angelegt werden.
+**Beispiel:** `beispiel-ordner`
+
+Innerhalb des Ordners wird eine neue `.mdx`-Datei erstellt.
+
+Jede neue Seite beginnt mit folgendem Header:
+
+```mdx
 ---
-title:
-description:
+title: "Titel der Seite"
+description: "Kurze Beschreibung"
 ---
 ```
 
-<Callout title="Wichtig">
-    Wenn man einen neuen Ordner erstellt, **muss** in der übergeordneten
-    `meta.json` der Ordnername hinzugefügt werden.
-</Callout>
+### Wichtiger Hinweis
 
-Um den live zustand der Doku zusehen kann die Doku lokal gehostet werden unter [http://localhost:3000/](http://localhost:3000).
-Mit dem Befehl npm oder bun wird dann die Lokale Doku gestartet.
+Wenn ein neuer Ordner erstellt wird, **muss** der Ordnername in der übergeordneten `meta.json` hinzugefügt werden.
 
-```
-npm run dev
-bun run dev
-```
+## Vorschau der Dokumentation
+
+Die Dokumentation kann lokal unter [http://localhost:3000/](http://localhost:3000) gehostet werden.
+
+Dazu einfach einen der folgenden Befehle ausführen:
+
+```sh
+npm run dev  # oder bun run dev
