@@ -3,77 +3,56 @@ title: Aufgabe 1
 description: Hier steht eine ausführliche Beschreibung mit Bildern
 ---
 
-`https://bbspaptw.moodle-nds.de/mod/page/view.php?id=19638`
+[Aufgabe auf Moodle ansehen](https://bbspaptw.moodle-nds.de/mod/page/view.php?id=19638)
 
 # Grundlegende MQTT-Kommunikation Aufgabe 1
 
-<div className="border-2 border-white p-4 mt-8">
-    Test Message: ist ein `node injection`, und ist als string eingestellt
-    Mit der Nachricht "Test Message".
+## Test Message
+Test Message ist ein `node injection` und als String eingestellt mit der Nachricht "Test Message".
 
-    ![MQTT Kommunikation](/Aufgabe1//string-test-message.jpeg)
-</div>
+![MQTT Kommunikation](/Aufgabe1/string-test-message.jpeg)
 
-<div className="border-2 border-white p-4 mt-8">
-    Send Test Message: ist ein node mqtt out, und ist als Server localhost:1883 gestellt, mit den Admin account.
-    Da es schreib Berechtigung braucht. Durch den Edit Button kommen wir zu den Eigenschaften.
+## Send Test Message
+Send Test Message ist ein MQTT-Out-Node, welcher als Server `localhost:1883` mit dem Admin-Account konfiguriert ist, da Schreibrechte benötigt werden. Über den Edit-Button können die Eigenschaften angepasst werden.
 
-    ![MQTT Kommunikation](/Aufgabe1//mqtt-output-test-message.jpeg)
-</div>
+![MQTT Kommunikation](/Aufgabe1/mqtt-output-test-message.jpeg)
 
-<div className="border-2 border-white p-4 mt-8">
-    Danach befindet man sich bei der Verbindung, und kann den Server einstellen.
-    Da haben wir wieder localhost und den Port angegeben.
+## Verbindungseinstellungen
+Nach dem Öffnen der Verbindungseinstellungen kann der Server konfiguriert werden. Hier wird `localhost` mit dem entsprechenden Port angegeben.
 
-    ![MQTT Kommunikation](/Aufgabe1//bearbeitung-button.jpeg)
-</div>
+![MQTT Kommunikation](/Aufgabe1/bearbeitung-button.jpeg)
 
-<div className="border-2 border-white p-4 mt-8">
-    Danach sind wir in Sicherheit reingegangen, da wir ein Benutzer einstellen müssen.
-    Wir haben den admin genommen, da er auf alles zugriff hat, und im späteren keine Probleme sich ergeben.
+## Sicherheitseinstellungen
+Im Tab "Sicherheit" wird ein Benutzer konfiguriert. Hier wird der Admin-Account genutzt, um vollen Zugriff zu gewährleisten und spätere Probleme zu vermeiden.
 
-    ![MQTT Kommunikation](/Aufgabe1//sicherheit-rechte-admin.jpeg)
-</div>
+![MQTT Kommunikation](/Aufgabe1/sicherheit-rechte-admin.jpeg)
 
-<div className="border-2 border-white p-4 mt-8">
-    Test Message und Send test Message haben wir verbunden.
-    Das bedeutet, wenn wir auf den Button drücken, wird die Nachricht an den Server gesendet.
+## Verbindung der Test Messages
+Test Message und Send Test Message wurden verbunden. Dadurch wird bei einem Button-Klick die Nachricht an den Server gesendet.
 
-    ![MQTT Kommunikation](/Aufgabe1/verbindung-der-test-message.jpeg)
-</div>
+![MQTT Kommunikation](/Aufgabe1/verbindung-der-test-message.jpeg)
 
-<div className="border-2 border-white p-4 mt-8">
-    Listen to test-topic: ist ein node mqtt in, und ist als Server localhost:1883 gestellt, mit den Admin account.
-    Damit wir ein input bekommen, also eine Nachricht zum Server.
-    Das ganze ist genauso eingestellt wie der Output, nur das es ein Input ist.
+## Listen to Test-Topic
+Listen to Test-Topic ist ein MQTT-In-Node, der ebenfalls mit `localhost:1883` und dem Admin-Account konfiguriert ist. Dadurch kann der Server empfangene Nachrichten verarbeiten. Die Konfiguration entspricht der des Outputs, allerdings handelt es sich hierbei um einen Input.
 
-    ![MQTT Kommunikation](/Aufgabe1/mqtt-input.jpeg)
-</div>
+![MQTT Kommunikation](/Aufgabe1/mqtt-input.jpeg)
 
-<div className="border-2 border-white p-4 mt-8">
-    debug 1: ist ein debug node, der dazu dient um die Nachricht auszugeben.
-    Funktioniert in dem falle wie ein print() oder echo.
-    Und da ist ein Button, also man kan den debug aktivieren oder deaktivieren.
+## Debug Node
+Ein Debug-Node dient zur Ausgabe der empfangenen Nachricht und funktioniert ähnlich wie `print()` oder `echo`. Der Debug kann über einen Button aktiviert oder deaktiviert werden.
 
-    ![MQTT Kommunikation](/Aufgabe1/debug-button.jpeg)
-</div>
+![MQTT Kommunikation](/Aufgabe1/debug-button.jpeg)
 
-<div className="border-2 border-white gap-2 p-4 mt-8">
-    Hier haben wir die beiden verbunden, das der Input vom Listen to test-topic, an den Debug weitergeleitet wird.
+## Verbindung zwischen Input und Debug
+Hier wird der Input vom Listen-to-Test-Topic-Node an den Debug-Node weitergeleitet.
 
-    ![MQTT Kommunikation](/Aufgabe1/mqtt-input-and-debug.jpeg)
-</div>
+![MQTT Kommunikation](/Aufgabe1/mqtt-input-and-debug.jpeg)
 
-<div className="border-2 border-white gap-2 p-4 mt-8">
-    Was da jetzt genau passiert ist, das man bei Test Message einen Button hat, wenn man den drückt.
-    Sendet er an den localhost eine Nachricht, die wir konfiguriert haben. Im unseren falle ist es einfach eine Test
-    Message.
+## Funktionsweise
+Drückt man den Button bei Test Message, wird eine vordefinierte Nachricht an `localhost` gesendet. In diesem Beispiel handelt es sich um die Test Message.
 
-    ![MQTT Kommunikation](/Aufgabe1/function.jpeg)
-</div>
+![MQTT Kommunikation](/Aufgabe1/function.jpeg)
 
-<div className="border-2 border-white gap-2 p-4 mt-8">
-    Und wenn man jetzt den Debugger öffnet, und auf den Button drückt, wird die Nachricht ausgegeben.
+## Debugger-Ausgabe
+Beim Öffnen des Debuggers und Drücken des Buttons wird die gesendete Nachricht ausgegeben.
 
-    ![MQTT Kommunikation](/Aufgabe1/debug-message.jpeg)
-</div>
+![MQTT Kommunikation](/Aufgabe1/debug-message.jpeg)
